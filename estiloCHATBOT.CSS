@@ -1,0 +1,257 @@
+/* Colores inspirados en el ámbito médico */
+:root {
+    --primary-color: #3342d5;        /* Verde agua */
+    --secondary-color: #0a173b;      /* Verde brillante */
+    --background-color: #6e98e7;     /* Fondo suave */
+    --text-color: #17252A;           /* Texto oscuro */
+    --button-color: #FEFFFF;         /* Botón claro */
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin:0 ;
+    padding: 0px -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: -230vh;
+    text-align: center;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--button-color);
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.menu {
+    background-color: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--button-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Estilos para el contenedor del chatbot y el login de doctores */
+.chatbot-container, .doctor-login {
+    display: none; /* Inicialmente oculto, se alternará con JavaScript */
+    width: 90%;
+    max-width: 400px; /* Límite de ancho para adaptarse mejor a pantallas móviles */
+    margin: 20px auto;
+    padding: 15px;
+    background: var(--button-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para el display y la entrada del chat */
+.chat-display {
+    width: 100%;
+    height: 50vh;
+    overflow-y: auto;
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    display: flex;
+    width: 100%;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--secondary-color);
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--button-color);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario de login de doctores */
+.doctor-login input, .doctor-login button {
+    width: 90%;
+    padding: 20px;
+    margin: 5px 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Estilos de la sección de registro de pacientes */
+.patient-registration {
+    display: none;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background: var(--button-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.patient-registration h2 {
+    margin-bottom: 15px;
+}
+
+.patient-registration input, .patient-registration textarea, .patient-registration button {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.patient-registration button {
+    background-color: var(--secondary-color);
+    color: var(--button-color);
+    cursor: pointer;
+    border: none;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e8f5e9; /* Verde claro */
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Encabezado y navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0 px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #26a69a; /* Verde agua */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: #2e7d32; /* Verde más oscuro */
+}
+
+/* Secciones de Chat y Doctor */
+#chatSection,
+#doctorSection,
+#patientRegistrationSection {
+    display: none;
+}
+
+h2 {
+    color: #26a69a; /* Verde agua */
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #26a69a; /* Verde agua */
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2e7d32; /* Verde más oscuro */
+}
+
+/* Lista de pacientes */
+.patients-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.patient {
+    background-color: #f1f8e9; /* Verde claro */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.patient p {
+    margin: 5px 0;
+    color: #424242; /* Gris oscuro para texto */
+}
+
+/* Estilos para el banner */
+.banner {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 200px; /* Ajusta esta altura según lo necesites */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+    display: block;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+
+

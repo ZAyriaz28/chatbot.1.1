@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Médico</title>
+    <link rel="stylesheet" href="estiloCHATBOT.CSS">
+</head>
+<body>
+    <!-- Menú de Navegación -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#" id="chatLink">Chat Médico</a></li>
+            <li><a href="#" id="doctorLink">Acceso para Doctores</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <header class="header">
+        <header class="header">
+        <img src="banner.png" alt="Banner Chat Médico" class="banner">
+        </header>
+    </header>
+
+    <!-- Sección del Chatbot -->
+    <main class="chatbot-container" id="chatSection">
+        <div class="chat-display" id="chatDisplay">
+            <!-- Mensajes de usuario y chatbot se mostrarán aquí -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Escribe tu pregunta aquí...">
+            <button id="sendButton">Enviar</button>
+        </div>
+    </main>
+<!--Sección de Doctores (Acceso exclusivo) -->
+    <section class="doctor-login" id="doctorSection">
+        <h2>Acceso para Doctores</h2>
+        <input type="text" placeholder="Usuario" id="doctorUser">
+        <input type="password" placeholder="Contraseña" id="doctorPassword">
+        <button id="loginButton">Ingresar</button>
+        <button onclick="volverAtras()">Volver</button>
+    </section>
+
+    <!-- Sección de Registro de Pacientes -->
+    <section class="patient-registration" id="patientRegistrationSection" style="display: none;">
+        <h2>Registro de Pacientes</h2>
+        <form id="patientForm">
+            <input type="text" placeholder="Nombre del paciente" id="patientName" required>
+            <input type="number" placeholder="Edad" id="patientAge" required>
+            <input type="date" placeholder="Fecha de Nacimiento" id="patientDOB" required>
+            <textarea placeholder="Síntomas" id="patientSymptoms" rows="3" required></textarea>
+            <textarea placeholder="Análisis del paciente" id="patientAnalysis" rows="3" required></textarea>
+            <button type="button" id="savePatientButton">Guardar Paciente</button>
+        </form>
+    </section>
+
+    <script src="menu.js"></script>
+    <script src="volver.js"></script>
+
+</body>
+</html>
